@@ -16,7 +16,7 @@ const Card = ({ icon, title, content, className }) => (
 
 const Advanced = () => {
   return (
-    <section className="pt-20 bg-gray-100">
+    <section className="pt-40 md:pt-20 bg-gray-100">
       <h1 className="text-black text-2xl md:text-3xl font-bold text-center px-4">
         Advanced Statistics
       </h1>
