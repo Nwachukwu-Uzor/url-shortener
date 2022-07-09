@@ -20,7 +20,7 @@ const Advanced = () => {
   const { loading, links, error } = useContext(LinkContext);
   return (
     <section className="pt-40 md:pt-20 bg-gray-100">
-      {!loading && !error && links.shortLink.length && (
+      {!loading && !error && links.shortLink.trim().length > 0 && (
         <ShortenedLink
           shortLink={links.shortLink}
           originalLink={links.originalLink}

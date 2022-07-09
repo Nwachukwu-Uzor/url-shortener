@@ -11,8 +11,8 @@ const Navbar = () => {
       <nav className="w-full relative md:flex justify-between items-center">
         <img src={logo} alt="logo" className="h-[25px]" />
         <div
-          className={`absolute md:static flex flex-col justify-between md:flex-row md:grow md:ml-10 bg-[#3a3053] md:bg-transparent left-2 right-2 top-8 z-10 py-6 md:py-0 opacity-0 md:opacity-100 duration-500 ${
-            open ? "top-8 opacity-100" : "top-[-20vh]"
+          className={`absolute md:static flex flex-col justify-between md:flex-row md:grow md:ml-10 bg-[#3a3053] md:bg-transparent left-2 right-2 top-8 z-10 py-6 md:py-0  md:opacity-100 duration-500 ${
+            open ? "top-8 opacity-100" : "top-[-20vh] opacity-0"
           } rounded-md md:rounded-none shadow-sm md:shadow-none text-center md:text-left px-4 md:px-0`}
         >
           <ul className="flex flex-col md:flex-row items-center py-2 md:py-0 border-b-2 md:border-none">

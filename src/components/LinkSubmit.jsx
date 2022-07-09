@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import LinkContext from "../context/linkContext";
 
+import { PulseLoader } from "react-spinners";
+
 const LinkSubmit = () => {
   const [link, setLink] = useState("");
   const [linkIsValid, setLinkIsValid] = useState(false);
@@ -28,7 +30,7 @@ const LinkSubmit = () => {
   };
   return (
     <section className="translate-y-[50%]">
-      <div className="w-full max-w-[1240px] mx-auto py-5 bg-[#3a3053] flex items-center h-min-[40vh] rounded-lg">
+      <div className="w-full max-w-[1240px] mx-auto py-5 bg-[#3a3053] flex items-center h-min-[40vh] md:rounded-lg">
         <form
           className="w-full grid grid-cols-1 md:grid-cols-5 gap-5 justify-between items-center px-5 md:px-12 "
           onSubmit={handleSubmit}
@@ -41,22 +43,16 @@ const LinkSubmit = () => {
             }`}
             value={link}
             onChange={handleChange}
-            required
           />
           <button className="p-3 bg-[#27d3d6] rounded-md text-white font-bold hover:opacity-75 cursor-pointer w-full block">
-            {loading && (
-              <span className="animate-spin text-white text-sm mr-2">
-                <ion-icon name="aperture-outline"></ion-icon>
-              </span>
-            )}
-            {loading ? "Loading" : "Shorten It!"}
+            {loading ? <PulseLoader color="#fff" /> : "Shorten It!"}
           </button>
           <p
             className={`text-red-500 text-sm font-bold ${
               linkIsValid ? "opacity-100" : "opacity-0"
             } duration-300`}
           >
-            Invalid Link
+            Please enter a valid link
           </p>
         </form>
       </div>
