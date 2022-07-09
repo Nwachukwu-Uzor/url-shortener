@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import LinkContext from "./linkContext";
+import LinkContext from "./LinkContext";
 
 const initLinkData = {
   shortLink: "",
