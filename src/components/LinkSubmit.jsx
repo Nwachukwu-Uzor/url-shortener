@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import LinkContext from "../context/linkContext";
+import LinkContext from "../context/LinkContext";
 
 import { PulseLoader } from "react-spinners";
 
