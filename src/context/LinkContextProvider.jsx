@@ -15,6 +15,7 @@ const LinkContextProvider = ({ children }) => {
   const handleLinkSearch = async (url) => {
     try {
       setLoading(true);
+      setLinks(initLinkData);
       const { data } = await axios.post(
         `https://api.shrtco.de/v2/shorten?url=${url}/very/long/link.html`
       );
@@ -24,6 +25,7 @@ const LinkContextProvider = ({ children }) => {
       });
     } catch (error) {
       setError(true);
+      console.log(error);
     } finally {
       setLoading(false);
     }

@@ -7,8 +7,8 @@ const ShortenedLink = ({ originalLink, shortLink }) => {
   const handleCopy = () => setCopied(true);
 
   return (
-    <div className="w-full max-w-[1240px] mt-3 mb-20 px-2 mx-auto flex flex-col md:flex-row items-center justify-between py-4 md:py-2 rounded-md bg-white shadow">
-      <p className="text-black font-medium text-md my-2 md:my-0 mx-auto md:w-full break-all">
+    <div className="w-full max-w-[1240px] mt-3 mb-20 px-2 mx-auto flex flex-col md:flex-row items-center justify-between py-4 rounded-md bg-white shadow">
+      <p className="text-black font-medium text-md my-2 md:my-0 md:w-full break-all max-w-[500px]">
         {originalLink}
       </p>
       <div className="flex items-center flex-col md:flex-row">

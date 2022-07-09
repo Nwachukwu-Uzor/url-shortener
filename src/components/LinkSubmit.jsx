@@ -27,6 +27,10 @@ const LinkSubmit = () => {
     }
 
     await handleShortenedLink(link);
+
+    if (!loading) {
+      setLink("");
+    }
   };
   return (
     <section className="translate-y-[50%]">
