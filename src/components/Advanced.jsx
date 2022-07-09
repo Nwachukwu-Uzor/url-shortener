@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import LinkContext from "../context/linkContext";
+import LinkContext from "../context/LinkContext";
 import ShortenedLink from "./ShortenedLink";
 
 const Card = ({ icon, title, content, className }) => (
