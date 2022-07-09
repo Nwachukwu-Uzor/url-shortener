@@ -74,23 +74,28 @@ const Footer = () => {
         </div>
       </div>
       <div className="bg-gray-200 py-3 px-4">
-        <div className="text-[#3e52a3] w-full max-w-[1240px] mx-auto   ">
-          Challenge by{" "}
-          <a
-            href="https://www.frontendmentor.io?ref=challenge"
-            target="_blank"
-            className="text-[#1bb8bb] hover:text-[#0c1e64] ease-linear duration-300"
-          >
-            Frontend Mentor
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://github.com/Nwachukwu-Uzor/"
-            className="text-[#15003774] hover:text-[#4b6bea] ease-linear duration-300"
-          >
-            Uzor Nwachukwu
-          </a>
-          .
+        <div className="text-[#3e52a3] w-full max-w-[1240px] mx-auto flex flex-col md:flex-row gap-2 md:gap-4">
+          <div>
+            Challenge by{" "}
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              className="text-[#1bb8bb] hover:text-[#0c1e64] ease-linear duration-300"
+            >
+              Frontend Mentor.
+            </a>
+          </div>
+          <div>
+            Coded by{" "}
+            <a
+              href="https://github.com/Nwachukwu-Uzor/"
+              className="text-[#15003774] hover:text-[#4b6bea] ease-linear duration-300"
+              target="_blank"
+            >
+              Uzor Nwachukwu
+            </a>
+            .
+          </div>
         </div>
       </div>
     </>
