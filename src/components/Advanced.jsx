@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import LinkContext from "../context/linkContext";
+import ShortenedLink from "./ShortenedLink";
 
 const Card = ({ icon, title, content, className }) => (
   <div
@@ -15,8 +17,15 @@ const Card = ({ icon, title, content, className }) => (
 );
 
 const Advanced = () => {
+  const { loading, links, error } = useContext(LinkContext);
   return (
     <section className="pt-40 md:pt-20 bg-gray-100">
+      {!loading && !error && links.shortLink.length && (
+        <ShortenedLink
+          shortLink={links.shortLink}
+          originalLink={links.originalLink}
+        />
+      )}
       <h1 className="text-black text-2xl md:text-3xl font-bold text-center px-4">
         Advanced Statistics
       </h1>
